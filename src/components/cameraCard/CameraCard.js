@@ -20,7 +20,7 @@ function CameraCard({ handleClick, handleBack }) {
                                 ? <Card.Body className="d-flex flex-column p-5">
                                 <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
                                 <button type="button" class="btn btn-primary mt-3" onClick={() => handleClick()}>Continue</button>
-                                <button type="button" class="btn btn-light mt-3 w-100" onClick={() => handleBack()}>Back</button>
+                                <button type="button" class="btn btn-light mt-3 w-100" onClick={() => setDataUri()}>Back</button>
                                 </Card.Body>
                                 : <Card.Body>
                                 <Camera onTakePhotoAnimationDone={handleTakePhotoAnimationDone}

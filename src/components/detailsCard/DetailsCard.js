@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function DetailsCard({ handleClick }) {
+function DetailsCard({ handleClick, handleBack }) {
     return (
         <div className="flex-grow-1 d-flex flex-column align-items-center">
-            <Card className="col-8">
+            <Card className="col-10">
                 <Card.Body className="d-flex flex-column p-5">
                     <div className="d-flex flex-column align-items-center">
                         <p className='fs-4 fw-bold'>Personal details</p>
@@ -24,7 +24,10 @@ function DetailsCard({ handleClick }) {
                         <option>4</option>
                         <option>5</option>
                     </select>
+
                     <button type="button" class="btn btn-primary mt-3" onClick={() => handleClick()}>Continue</button>
+                    <button type="button" class="btn btn-light mt-3" onClick={() => handleBack()}>Back</button>
+
                 </Card.Body>
             </Card>
         </div>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import CameraCard from './components/cameraCard/CameraCard';
 import DetailsCard from './components/detailsCard/DetailsCard';
+import FinalizeCard from './components/finalizeCard/FinalizeCard';
 import IntroCard from './components/introCard/IntroCard';
 import Navigation from './components/navigation/Navigation';
 import Stepper from './components/stepper/Stepper';
@@ -11,29 +12,41 @@ function App() {
 
   const [step, setStep] = useState(0)
 
-  const handleClick = num => {
-    setStep(step+1);
+  const handleClick = () => {
+    if(step <= 3) {
+      setStep(step+1);
+    }
   };
+
+  const handleBack = () => {
+    if(step >= 1) {
+      setStep(step-1)
+    }
+  }
+
+  const handleRestart = () => {
+      setStep(0)
+  }
 
   const renderSwitch = (param) => {
     switch(param) {
-      case 1:
-        return <IntroCard handleClick={handleClick}/>;
+      case 0:
+        return <IntroCard handleClick={handleClick} handleBack={handleBack}/>;
+      case 1: 
+        return <DetailsCard handleClick={handleClick} handleBack={handleBack}/>;
       case 2: 
-        return <DetailsCard handleClick={handleClick}/>;
+        return <CameraCard handleClick={handleClick} handleBack={handleBack}/>;
       case 3: 
-        return <CameraCard handleClick={handleClick}/>;
+        return <FinalizeCard handleRestart={handleRestart}/>;
       default:
         return 'foo';
     }
   }
   return (
     <div className="App min-vh-100 d-flex flex-column">
-      {step}
       <Navigation />
       <Stepper />
       {renderSwitch(step)}
-      <Button onClick={() => setStep(1)}>HI</Button>
     </div>
 
     

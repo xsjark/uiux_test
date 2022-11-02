@@ -3,8 +3,8 @@ import Card from 'react-bootstrap/Card';
 
 function IntroCard({handleClick}) {
     return (
-        <div className="flex-grow-1 d-flex flex-column align-items-center">
-            <Card className="col-8">
+        <div className="flex-grow-1 d-flex flex-column align-items-center ">
+            <Card className="col-10">
                 <Card.Body className="d-flex flex-column align-items-center p-5">
                 <p className='fs-4 fw-bold'>Title</p>
                 <p>Start process. Your application may or may not be accepted.</p>

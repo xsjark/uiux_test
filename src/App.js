@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import CameraCard from './components/cameraCard/CameraCard';
 import DetailsCard from './components/detailsCard/DetailsCard';
 import IntroCard from './components/introCard/IntroCard';
 import Navigation from './components/navigation/Navigation';
@@ -20,6 +21,8 @@ function App() {
         return <IntroCard handleClick={handleClick}/>;
       case 2: 
         return <DetailsCard handleClick={handleClick}/>;
+      case 3: 
+        return <CameraCard handleClick={handleClick}/>;
       default:
         return 'foo';
     }

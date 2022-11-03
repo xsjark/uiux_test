@@ -4,7 +4,7 @@ import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import CameraPreviewCard from '../cameraPreviewCard/CameraPreviewCard';
 
-function CameraCard({ handleForward, handleBack, handleTakePhoto }) {
+function CameraCard({ handleForward, handleBack, handleTakePhoto, idType }) {
     const [dataUri, setDataUri] = useState('');
 
     function handleTakePhotoAnimationDone(dataUri) {
@@ -19,6 +19,10 @@ function CameraCard({ handleForward, handleBack, handleTakePhoto }) {
                 {
                     (dataUri)
                         ? <Card.Body className="d-flex flex-column p-3 p-md-5">
+                            <div className="d-flex flex-column align-items-center">
+                                <p className='fs-4 fw-bold'>Confirmacion de identidad</p>
+                                <p>Verifique si todo es visible.</p>
+                            </div>
                             <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
                             <div className="d-flex justify-content-center">
                                 <button type="button" class="btn btn-light mt-3 me-3" onClick={() => setDataUri()}>Back</button>
@@ -26,6 +30,10 @@ function CameraCard({ handleForward, handleBack, handleTakePhoto }) {
                             </div>
                         </Card.Body>
                         : <Card.Body className="d-flex flex-column p-3 p-md-5">
+                            <div className="d-flex flex-column align-items-center">
+                                <p className='fs-4 fw-bold'>Confirmacion de identidad</p>
+                                <p>Tome una selfie con su {idType}.</p>
+                            </div>
                             <Camera onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
                                 isFullscreen={isFullscreen}
                             />

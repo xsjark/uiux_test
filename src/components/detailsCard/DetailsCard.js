@@ -23,14 +23,14 @@ function DetailsCard({ handleForward, handleBack, handleSubmitForm }) {
 
                         <input {...register("phone", { required: "Phone is required" })} id="phone" className="form-control" placeholder="Telefono" />
 
-                        <select {...register("idtype", { required: "Type of identification is required" })} id="idtype" className="form-control">
+                        <select {...register("idType", { required: "Type of identification is required" })} id="idtype" className="form-control">
                             <option value="" selected>Tipo identificación</option>
-                            <option value={1}>Pasaporte</option>
-                            <option value={2}>Otro identificación oficial</option>
+                            <option value="pasaporte">Pasaporte</option>
+                            <option value="cédula o otro identificación oficial">Otro identificación oficial</option>
                         </select>
                         <div className="d-flex justify-content-end">
-                            <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Back</button>
-                            <input type="submit" className="btn btn-primary mt-3" />
+                            <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
+                            <input type="submit"value="Continuar"  className="btn btn-primary mt-3" />
                         </div>
                     </form>
                 </Card.Body>

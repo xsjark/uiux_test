@@ -49,7 +49,7 @@ function App() {
       case 1: 
         return <DetailsCard handleForward={handleForward} handleBack={handleBack} handleSubmitForm={handleSubmitForm}/>;
       case 2: 
-        return <CameraCard handleForward={handleForward} handleBack={handleBack} handleTakePhoto={handleTakePhoto}/>;
+        return <CameraCard handleForward={handleForward} handleBack={handleBack} handleTakePhoto={handleTakePhoto} idType={formData.idType}/>;
       case 3: 
         return <LoanCard handleForward={handleForward} handleBack={handleBack} handleLoanAmount={handleLoanAmount} loanAmount={loanAmount}/>;
       case 4: 

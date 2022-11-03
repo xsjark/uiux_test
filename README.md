@@ -1,3 +1,5 @@
+[Solution](https://spontaneous-fox-7b2978.netlify.app/)
+
 Simulación de un requerimiento donde tendrás que exhibir tu conocimiento en UX/UI design:
 
 Cliente: Queremos una pagina intuitiva para que nuestros clientes puedan solicitar un credito con nosotros. Actualmente les explicamos al cliente que va a pasar por un proceso de seleccion (con esta pagina sería automatico), y que su credito puede o no ser aprobado. Si el cliente esta de acuerdo, entonces tomamos los datos personales (nombre, telefono, ciudad, tipo de documento: pasaporte o identificacion oficial).

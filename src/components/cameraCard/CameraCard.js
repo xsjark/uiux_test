@@ -14,21 +14,26 @@ function CameraCard({ handleForward, handleBack }) {
     const isFullscreen = false;
     return (
         <div className="flex-grow-1 d-flex flex-column align-items-center">
-            <Card className="col-10">
-                        {
-                            (dataUri)
-                                ? <Card.Body className="d-flex flex-column p-5">
-                                <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
+            <Card className="col-8">
+                {
+                    (dataUri)
+                        ? <Card.Body className="d-flex flex-column p-5">
+                            <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
+                            <div className="d-flex justify-content-end">
+                                <button type="button" class="btn btn-light mt-3 me-3" onClick={() => setDataUri()}>Back</button>
                                 <button type="button" class="btn btn-primary mt-3" onClick={() => handleForward()}>Continue</button>
-                                <button type="button" class="btn btn-light mt-3 w-100" onClick={() => setDataUri()}>Back</button>
-                                </Card.Body>
-                                : <Card.Body>
-                                <Camera onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
-                                    isFullscreen={isFullscreen}
-                                />
-                                <button type="button" class="btn btn-light mt-3 w-100" onClick={() => handleBack()}>Back</button>
-                                </Card.Body>
-                        }
+                            </div>
+                        </Card.Body>
+                        : <Card.Body className="d-flex flex-column p-5">
+                            <Camera onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
+                                isFullscreen={isFullscreen}
+                            />
+                            <div className="d-flex justify-content-end">
+                                <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Back</button>
+                                <button type="button" className="btn btn-primary mt-3" disabled>Continue</button>
+                            </div>
+                        </Card.Body>
+                }
             </Card>
         </div>
     );

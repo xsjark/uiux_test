@@ -1,7 +1,7 @@
 import './stepper.css'
 function Stepper() {
     return (
-        <div id="stepper_container" className=" d-flex flex-row justify-content-around col-11 align-self-center">
+        <div id="stepper_container" className=" d-flex flex-row justify-content-around col-8 align-self-center">
             <div className="col-sm d-flex flex-column align-items-center">
                 <p className="text-center">1.</p>
                 <p className="text-center d-none d-md-block">Start process</p>

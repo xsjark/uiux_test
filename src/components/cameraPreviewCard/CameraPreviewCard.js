@@ -3,7 +3,7 @@ function CameraPreviewCard({ dataUri, isFullscreen  }) {
 
     return (
         <div className={'demo-image-preview d-flex flex-column' + classNameFullscreen}>
-        <img src={dataUri} />
+        <img src={dataUri}/>
       </div>
     );
 }

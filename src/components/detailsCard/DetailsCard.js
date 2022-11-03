@@ -6,11 +6,11 @@ function DetailsCard({ handleForward, handleBack, handleSubmitForm }) {
     const { register, handleSubmit, formState: { errors } } = useForm();
     return (
         <div className="flex-grow-1 d-flex flex-column align-items-center">
-            <Card className="col-8">
-                <Card.Body className="d-flex flex-column p-5">
+            <Card className="col-10 col-md-8">
+                <Card.Body className="d-flex flex-column p-3 p-md-5">
                     <div className="d-flex flex-column align-items-center">
                         <p className='fs-4 fw-bold'>Personal details</p>
-                        <p>Start process. Your application may or may not be accepted.</p>
+                        <p>Enter your personal details into the form.</p>
                     </div>
 
                     <form className="d-grid gap-3" onSubmit={handleSubmit((data) => {
@@ -23,8 +23,8 @@ function DetailsCard({ handleForward, handleBack, handleSubmitForm }) {
 
                         <input {...register("phone", { required: "Phone is required" })} id="phone" className="form-control" placeholder="Telefono" />
 
-                        <select {...register("idtype", { required: "Type of identification is required" })} id="idtype" className="form-control" placeholder="Tipo identificación">
-                            <option value="" selected>Open this select menu</option>
+                        <select {...register("idtype", { required: "Type of identification is required" })} id="idtype" className="form-control">
+                            <option value="" selected>Tipo identificación</option>
                             <option value={1}>Pasaporte</option>
                             <option value={2}>Otro identificación oficial</option>
                         </select>

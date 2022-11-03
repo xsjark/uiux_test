@@ -12,7 +12,7 @@ function App() {
 
   const [step, setStep] = useState(0)
 
-  const handleClick = () => {
+  const handleForward = () => {
     if(step <= 3) {
       setStep(step+1);
     }
@@ -31,11 +31,11 @@ function App() {
   const renderSwitch = (param) => {
     switch(param) {
       case 0:
-        return <IntroCard handleClick={handleClick} handleBack={handleBack}/>;
+        return <IntroCard handleForward={handleForward} handleBack={handleBack}/>;
       case 1: 
-        return <DetailsCard handleClick={handleClick} handleBack={handleBack}/>;
+        return <DetailsCard handleForward={handleForward} handleBack={handleBack}/>;
       case 2: 
-        return <CameraCard handleClick={handleClick} handleBack={handleBack}/>;
+        return <CameraCard handleForward={handleForward} handleBack={handleBack}/>;
       case 3: 
         return <FinalizeCard handleRestart={handleRestart}/>;
       default:

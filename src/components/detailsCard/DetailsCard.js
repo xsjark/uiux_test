@@ -1,7 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useForm } from 'react-hook-form';
 
-function DetailsCard({ handleClick, handleBack }) {
+function DetailsCard({ handleForward, handleBack }) {
+
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    console.log(errors)
     return (
         <div className="flex-grow-1 d-flex flex-column align-items-center">
             <Card className="col-10">
@@ -10,24 +14,27 @@ function DetailsCard({ handleClick, handleBack }) {
                         <p className='fs-4 fw-bold'>Personal details</p>
                         <p>Start process. Your application may or may not be accepted.</p>
                     </div>
-                    <label for="inputPassword5" class="form-label">Nombre</label>
-                    <input type="text" id="name" class="form-control" aria-describedby="passwordHelpBlock" />
 
-                    <label for="inputPassword5" class="form-label">Telefono</label>
-                    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" />
+                    <form onSubmit={handleSubmit((data) => {
+                        console.log(data)
+                        handleForward()
+                    })}>
+                    <input {...register("name", {required: "Name is required"})} id="name" className="form-control" placeholder="Nombre"/>
 
-                    <label for="exampleFormControlSelect1" class="form-label">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <input {...register("surname", {required: "Surname is required"})} id="surname" className="form-control" placeholder="Apellido"/>
+
+                    <input {...register("phone", {required: "Phone is required"})} id="phone" className="form-control" placeholder="Telefono"/>
+
+                    <select {...register("idtype", {required: "Type of identification is required"})}  id="idtype" className="form-control" placeholder="Tipo identificación">
+                        <option value="" selected>Open this select menu</option>
+                        <option value={1}>Pasaporte</option>
+                        <option value={2}>Otro identificación oficial</option>
                     </select>
-
-                    <button type="button" class="btn btn-primary mt-3" onClick={() => handleClick()}>Continue</button>
-                    <button type="button" class="btn btn-light mt-3" onClick={() => handleBack()}>Back</button>
-
+                    <div>
+                        <button type="button" className="btn btn-light mt-3" onClick={() => handleBack()}>Back</button>
+                        <input type="submit" className="btn btn-primary mt-3"/>
+                    </div>
+                    </form>
                 </Card.Body>
             </Card>
         </div>

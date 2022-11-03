@@ -4,7 +4,7 @@ import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import CameraPreviewCard from '../cameraPreviewCard/CameraPreviewCard';
 
-function CameraCard({ handleClick, handleBack }) {
+function CameraCard({ handleForward, handleBack }) {
     const [dataUri, setDataUri] = useState('');
 
     function handleTakePhotoAnimationDone(dataUri) {
@@ -19,7 +19,7 @@ function CameraCard({ handleClick, handleBack }) {
                             (dataUri)
                                 ? <Card.Body className="d-flex flex-column p-5">
                                 <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
-                                <button type="button" class="btn btn-primary mt-3" onClick={() => handleClick()}>Continue</button>
+                                <button type="button" class="btn btn-primary mt-3" onClick={() => handleForward()}>Continue</button>
                                 <button type="button" class="btn btn-light mt-3 w-100" onClick={() => setDataUri()}>Back</button>
                                 </Card.Body>
                                 : <Card.Body>

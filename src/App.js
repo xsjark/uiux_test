@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import CameraCard from './components/cameraCard/CameraCard';
 import DetailsCard from './components/detailsCard/DetailsCard';
@@ -6,7 +5,6 @@ import LoanCard from './components/loanCard/LoanCard';
 import IntroCard from './components/introCard/IntroCard';
 import Navigation from './components/navigation/Navigation';
 import Stepper from './components/stepper/Stepper';
-import FinalizeCard from './components/finalizeCard/FinalizeCard';
 import SuccessCard from './components/successCard/SuccessCard';
 import Footer from './components/footer/Footer';
 
@@ -55,8 +53,6 @@ function App() {
       case 3: 
         return <LoanCard handleForward={handleForward} handleBack={handleBack} handleLoanAmount={handleLoanAmount} loanAmount={loanAmount}/>;
       case 4: 
-        return <FinalizeCard handleForward={handleForward} handleBack={handleBack} formData={formData} photoData={photoData} loanAmount={loanAmount}/>;
-      case 5: 
         return <SuccessCard handleRestart={handleRestart} loanAmount={loanAmount}/>;
       default:
         return 'foo';

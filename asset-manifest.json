@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/uiux_test/static/css/main.7def84b4.css",
+    "main.js": "/uiux_test/static/js/main.178b04e5.js",
+    "static/js/787.80eed756.chunk.js": "/uiux_test/static/js/787.80eed756.chunk.js",
+    "index.html": "/uiux_test/index.html",
+    "main.7def84b4.css.map": "/uiux_test/static/css/main.7def84b4.css.map",
+    "main.178b04e5.js.map": "/uiux_test/static/js/main.178b04e5.js.map",
+    "787.80eed756.chunk.js.map": "/uiux_test/static/js/787.80eed756.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7def84b4.css",
+    "static/js/main.178b04e5.js"
+  ]
+}

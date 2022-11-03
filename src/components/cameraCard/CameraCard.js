@@ -20,8 +20,8 @@ function CameraCard({ handleForward, handleBack, handleTakePhoto, idType }) {
                     (dataUri)
                         ? <Card.Body className="d-flex flex-column p-3 p-md-5">
                             <div className="d-flex flex-column align-items-center">
-                                <p className='fs-4 fw-bold'>Confirmacion de identidad</p>
-                                <p>Verifique si todo es visible.</p>
+                                <p className='fs-4 fw-bold'>Confirmación de identidad</p>
+                                <p>Asegúrate de que se vean claramente todos los datos de su {idType}.</p>
                             </div>
                             <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
                             <div className="d-flex justify-content-center">
@@ -31,15 +31,15 @@ function CameraCard({ handleForward, handleBack, handleTakePhoto, idType }) {
                         </Card.Body>
                         : <Card.Body className="d-flex flex-column p-3 p-md-5">
                             <div className="d-flex flex-column align-items-center">
-                                <p className='fs-4 fw-bold'>Confirmacion de identidad</p>
+                                <p className='fs-4 fw-bold'>Confirmación de identidad</p>
                                 <p>Tome una selfie con su {idType}.</p>
                             </div>
                             <Camera onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
                                 isFullscreen={isFullscreen}
                             />
                             <div className="d-flex justify-content-center">
-                                <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Back</button>
-                                <button type="button" className="btn btn-primary mt-3" disabled>Continue</button>
+                                <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
+                                <button type="button" className="btn btn-primary mt-3" disabled>Continuar</button>
                             </div>
                         </Card.Body>
                 }

@@ -8,9 +8,8 @@ function DetailsCard({ handleForward, handleBack, handleSubmitForm }) {
         <div className="flex-grow-1 d-flex flex-column align-items-center">
             <Card className="col-10 col-md-8">
                 <Card.Body className="d-flex flex-column p-3 p-md-5">
-                    <div className="d-flex flex-column align-items-center">
-                        <p className='fs-4 fw-bold'>Personal details</p>
-                        <p>Enter your personal details into the form.</p>
+                    <div className="d-flex flex-column align-items-center pb-3">
+                        <p className='fs-4 fw-bold'>Datos personales</p>
                     </div>
 
                     <form className="d-grid gap-3" onSubmit={handleSubmit((data) => {
@@ -21,7 +20,7 @@ function DetailsCard({ handleForward, handleBack, handleSubmitForm }) {
 
                         <input {...register("surname", { required: "Surname is required" })} id="surname" className="form-control" placeholder="Apellido" />
 
-                        <input {...register("phone", { required: "Phone is required" })} id="phone" className="form-control" placeholder="Telefono" />
+                        <input {...register("phone", { required: "Phone is required" })} id="phone" className="form-control" placeholder="Número telefónico" />
 
                         <select {...register("idType", { required: "Type of identification is required" })} id="idtype" className="form-control">
                             <option value="" selected>Tipo identificación</option>

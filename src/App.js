@@ -8,6 +8,7 @@ import Navigation from './components/navigation/Navigation';
 import Stepper from './components/stepper/Stepper';
 import FinalizeCard from './components/finalizeCard/FinalizeCard';
 import SuccessCard from './components/successCard/SuccessCard';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -66,9 +67,8 @@ function App() {
       <Navigation />
       <Stepper step={step}/>
       {renderSwitch(step)}
+      <Footer />
     </div>
-
-    
   );
 }
 

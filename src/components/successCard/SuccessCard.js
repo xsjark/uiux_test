@@ -8,7 +8,7 @@ function SuccessCard({handleRestart, loanAmount}) {
                 <Card.Body className="d-flex flex-column p-3 p-md-5">
                     <div className="d-flex flex-column align-items-center">
                         <p className='fs-4 fw-bold'>¡Felicidades!</p>
-                        <p>Solicitud exitosa de ${loanAmount}.</p>
+                        <p>Solicitud exitosa de ${loanAmount}</p>
                     </div>
                     <div className="d-flex justify-content-center">
                             <button type="button" class="btn btn-primary mt-3" onClick={() => handleRestart()}>Nuevo préstamo</button>

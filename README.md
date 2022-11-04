@@ -16,7 +16,7 @@ Instalar dependencias
 npm install
 
 ```
-##Task
+## Task
 
 Simulación de un requerimiento donde tendrás que exhibir tu conocimiento en UX/UI design:
 

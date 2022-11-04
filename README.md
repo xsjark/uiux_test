@@ -1,4 +1,22 @@
-[Solution](https://spontaneous-fox-7b2978.netlify.app/)
+## Demo
+El [demo](https://spontaneous-fox-7b2978.netlify.app/) hosteado en Netlify.
+
+## Setup
+Clonear el repo
+```bash
+
+git clone https://github.com/xsjark/db_test
+cd db_test
+
+```
+
+Instalar dependencias
+```bash
+
+npm install
+
+```
+##Task
 
 Simulación de un requerimiento donde tendrás que exhibir tu conocimiento en UX/UI design:
 

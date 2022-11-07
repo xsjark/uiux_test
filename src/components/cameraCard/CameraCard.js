@@ -25,8 +25,8 @@ function CameraCard({ handleForward, handleBack, handleTakePhoto, idType }) {
                             </div>
                             <CameraPreviewCard dataUri={dataUri} isFullscreen={isFullscreen} />
                             <div className="d-flex justify-content-center">
-                                <button type="button" class="btn btn-light mt-3 me-3" onClick={() => setDataUri()}>Back</button>
-                                <button type="button" class="btn btn-primary mt-3" onClick={() => handleForward()}>Continue</button>
+                                <button type="button" class="btn rounded-pill btn-light mt-3 me-3" onClick={() => setDataUri()}>Back</button>
+                                <button type="button" class="btn rounded-pill btn-primary mt-3" onClick={() => handleForward()}>Continue</button>
                             </div>
                         </Card.Body>
                         : <Card.Body className="d-flex flex-column p-3 p-md-5">
@@ -38,8 +38,8 @@ function CameraCard({ handleForward, handleBack, handleTakePhoto, idType }) {
                                 isFullscreen={isFullscreen}
                             />
                             <div className="d-flex justify-content-center">
-                                <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
-                                <button type="button" className="btn btn-primary mt-3" disabled>Continuar</button>
+                                <button type="button" className="btn rounded-pill btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
+                                <button type="button" className="btn rounded-pill btn-primary mt-3" disabled>Continuar</button>
                             </div>
                         </Card.Body>
                 }

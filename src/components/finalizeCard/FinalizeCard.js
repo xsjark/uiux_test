@@ -31,8 +31,8 @@ function FinalizeCard({ handleForward, handleBack, formData, photoData, loanAmou
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
-                            <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Back</button>
-                            <button type="button" class="btn btn-primary mt-3" onClick={() => handleForward()}>Confirm</button>
+                            <button type="button" className="btn rounded-pill btn-light mt-3 me-3" onClick={() => handleBack()}>Back</button>
+                            <button type="button" class="btn rounded-pill btn-primary mt-3" onClick={() => handleForward()}>Confirm</button>
                     </div>
                 </Card.Body>
             </Card>

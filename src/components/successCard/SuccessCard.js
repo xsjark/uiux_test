@@ -11,7 +11,7 @@ function SuccessCard({handleRestart, loanAmount}) {
                         <p>Solicitud exitosa de ${loanAmount}</p>
                     </div>
                     <div className="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary mt-3" onClick={() => handleRestart()}>Nuevo préstamo</button>
+                            <button type="button" class="btn rounded-pill btn-primary mt-3" onClick={() => handleRestart()}>Nuevo préstamo</button>
                     </div>
                 </Card.Body>
             </Card>

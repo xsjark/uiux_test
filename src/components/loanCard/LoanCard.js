@@ -23,8 +23,8 @@ function LoanCard({ handleForward, handleBack, handleLoanAmount, loanAmount }) {
                         </div>
                         <Slider handleLoanAmount={handleLoanAmount} loanAmount={loanAmount}/>
                         <div className="d-flex">
-                            <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
-                            <button type="button" class="btn btn-primary mt-3" onClick={() => {handleForward()}}>Continuar</button>
+                            <button type="button" className="btn rounded-pill btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
+                            <button type="button" class="btn rounded-pill btn-primary mt-3" onClick={() => {handleForward()}}>Continuar</button>
                         </div>
                     </Card.Body>
                 </Card>

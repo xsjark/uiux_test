@@ -28,8 +28,8 @@ function DetailsCard({ handleForward, handleBack, handleSubmitForm }) {
                             <option value="cédula o otro identificación oficial">Otro identificación oficial</option>
                         </select>
                         <div className="d-flex justify-content-end">
-                            <button type="button" className="btn btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
-                            <input type="submit"value="Continuar"  className="btn btn-primary mt-3" />
+                            <button type="button" className="btn rounded-pill btn-light mt-3 me-3" onClick={() => handleBack()}>Atrás</button>
+                            <input type="submit"value="Continuar"  className="btn rounded-pill btn-primary mt-3" />
                         </div>
                     </form>
                 </Card.Body>
